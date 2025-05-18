@@ -7,11 +7,12 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class WebConfig implements WebMvcConfigurer {
 
     @Override
-    public void addCorsMappings(CorsRegistry registry){
-        registry.addMapping("/**")
-                .allowedOrigins("http://localhost:4200","https://metroapp.site")
+    public void addCorsMappings(CorsRegistry registry) {
+        registry
+                .addMapping("/**")                    // Aplica a todas las rutas del backend
+                .allowedOrigins("*")                  // Permite cualquier origen
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                        .allowedHeaders("*")
-                        .allowCredentials(true);
+                .allowedHeaders("*");                 // Permite cualquier cabecera
+        // No incluimos allowCredentials(true) para evitar conflictos con "*"
     }
 }

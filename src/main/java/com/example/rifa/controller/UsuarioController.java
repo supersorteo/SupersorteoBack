@@ -13,8 +13,9 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/usuarios")
 //@CrossOrigin(value = "http://localhost:4200", "https://metroapp.site")
-@CrossOrigin(origins = {"http://localhost:4200", "https://metroapp.site"})
-
+//@CrossOrigin(origins = {"http://localhost:4200", "https://metroapp.site"})
+@CrossOrigin(origins = "*")
+//https://ms-rifas-latest.onrender.com/
 public class UsuarioController {
 
     @Autowired

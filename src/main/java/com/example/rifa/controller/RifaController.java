@@ -14,7 +14,8 @@ import java.util.List;
 @RestController
 @RequestMapping("api/rifas")
 //@CrossOrigin(value = "http://localhost:4200")
-@CrossOrigin(origins = {"http://localhost:4200", "https://metroapp.site"})
+//@CrossOrigin(origins = {"http://localhost:4200", "https://metroapp.site"})
+@CrossOrigin(origins = "*")
 public class RifaController {
 
     private final RifaService rifaService;

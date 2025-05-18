@@ -16,7 +16,8 @@ import java.util.*;
 @RestController
 @RequestMapping("/api/images")
 //@CrossOrigin(value = "http://localhost:4200")
-@CrossOrigin(origins = {"http://localhost:4200", "https://metroapp.site"})
+//@CrossOrigin(origins = {"http://localhost:4200", "https://metroapp.site"})
+@CrossOrigin(origins = "*")
 public class ImageController {
     //private static final String UPLOAD_DIR = "src/main/resources/uploads/";
    // private static final String UPLOAD_DIR = "uploads/";
@@ -39,7 +40,8 @@ public class ImageController {
                     String fileName = System.currentTimeMillis() + "_" + file.getOriginalFilename();
                     Path filePath = Paths.get(UPLOAD_DIR + fileName);
                     Files.write(filePath, file.getBytes());
-                    String fileUrl = "http://localhost:8080/api/images/" + fileName;
+                    //String fileUrl = "http://localhost:8080/api/images/" + fileName;
+                    String fileUrl = "https://ms-rifas-latest.onrender.com/api/images/" + fileName;
                     urls.add(fileUrl);
                     System.out.println("Archivo guardado: " + fileName);
                 }
@@ -88,7 +90,8 @@ public class ImageController {
                 for (File file : files) {
                     if (file.isFile()) {
                         // Agregar la URL completa de la imagen
-                        String fileUrl = "http://localhost:8080/api/images/" + file.getName();
+                        //String fileUrl = "http://localhost:8080/api/images/" + file.getName();
+                        String fileUrl = "https://ms-rifas-latest.onrender.com/api/images/" + file.getName();
                         fileNames.add(fileUrl);
                     }
                 }

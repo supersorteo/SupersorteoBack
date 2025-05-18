@@ -13,8 +13,9 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/codigos-vip")
-//@CrossOrigin(value = "http://localhost:4200")
-@CrossOrigin(origins = {"http://localhost:4200", "https://metroapp.site"})
+
+//@CrossOrigin(origins = {"http://localhost:4200", "https://metroapp.site"})
+@CrossOrigin(origins = "*")
 public class CodigoVipController {
     @Autowired
     private CodigoVipService codigoVipService;

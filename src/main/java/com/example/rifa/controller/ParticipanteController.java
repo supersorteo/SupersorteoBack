@@ -10,7 +10,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/participantes")
-@CrossOrigin(origins = {"http://localhost:4200", "https://metroapp.site"})
+//@CrossOrigin(origins = {"http://localhost:4200", "https://metroapp.site"})
+@CrossOrigin(origins = "*")
 public class ParticipanteController {
 
     @Autowired
