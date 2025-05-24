@@ -41,7 +41,7 @@ public class ImageController {
                     Path filePath = Paths.get(UPLOAD_DIR + fileName);
                     Files.write(filePath, file.getBytes());
                     //String fileUrl = "http://localhost:8080/api/images/" + fileName;
-                    String fileUrl = "https://just-purpose-production.up.railway.app/api/images/" + fileName;
+                    String fileUrl = "https://adequate-purpose-production.up.railway.app/api/images/" + fileName;
                     urls.add(fileUrl);
                     System.out.println("Archivo guardado: " + fileName);
                 }
@@ -91,7 +91,7 @@ public class ImageController {
                     if (file.isFile()) {
                         // Agregar la URL completa de la imagen
                         //String fileUrl = "http://localhost:8080/api/images/" + file.getName();
-                        String fileUrl = "https://just-purpose-production.up.railway.app/api/images/" + file.getName();
+                        String fileUrl = "https://adequate-purpose-production.up.railway.app/api/images/" + file.getName();
                         fileNames.add(fileUrl);
                     }
                 }
